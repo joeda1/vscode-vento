@@ -7,6 +7,13 @@
         { "include": "source.vento" },
         { "include": "#attributes" }
       ]
+    },
+    "L:source.css -comment -string": {
+      "patterns": [
+        { "include": "#comment" },
+        { "include": "#js_code" },
+        { "include": "#template_tag" }
+      ]
     }
   },
   "fileTypes": ["vto", "vento", "html", "md"],
