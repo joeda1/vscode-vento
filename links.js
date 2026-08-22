@@ -21,7 +21,7 @@ const LINK_RE = /\b(?:include|layout|from)\s*(["'])([^"'\n]+\.(?:vto|vento))\1/g
  *   exactly the path (quotes excluded), suitable for
  *   `TextDocument.positionAt()`.
  */
-function findTemplateLinks(text) {
+export function findTemplateLinks(text) {
   const results = [];
 
   LINK_RE.lastIndex = 0;
@@ -35,5 +35,3 @@ function findTemplateLinks(text) {
 
   return results;
 }
-
-module.exports = { findTemplateLinks };

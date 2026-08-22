@@ -1,5 +1,5 @@
-const vscode = require("vscode");
-const { findTemplateLinks } = require("./links");
+import * as vscode from "vscode";
+import { findTemplateLinks } from "./links.js";
 
 /**
  * Resolves a template path found in a document to an absolute file URI.
@@ -56,7 +56,7 @@ class VentoLinkProvider {
  *
  * @param {vscode.ExtensionContext} context The extension context.
  */
-function activate(context) {
+export function activate(context) {
   context.subscriptions.push(
     vscode.languages.registerDocumentLinkProvider(
       { language: "vento" },
@@ -69,6 +69,4 @@ function activate(context) {
  * Extension teardown point. Nothing to clean up: the provider is disposed
  * automatically through `context.subscriptions`.
  */
-function deactivate() {}
-
-module.exports = { activate, deactivate };
+export function deactivate() {}
