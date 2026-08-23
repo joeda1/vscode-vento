@@ -6,8 +6,9 @@
   "publisher": "oscarotero",
   "icon": "icon.png",
   "engines": {
-    "vscode": "^1.79.0"
+    "vscode": "^1.89.0"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/ventojs/vscode-vento"
@@ -15,12 +16,13 @@
   "categories": [
     "Programming Languages"
   ],
-  "main": "",
+  "main": "./extension.js",
   "extensionDependencies": [
     "vscode.html-language-features"
   ],
   "scripts": {
-    "package": "vsce package"
+    "package": "vsce package",
+    "test": "node --test"
   },
   "contributes": {
     "languages": [
